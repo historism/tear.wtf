@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>tear.wtf</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="icon" type="image/x-icon" href="/assets/icons/favicon.ico">
+    </head>
+    <body>
+        <canvas id="stars"></canvas>
+
+        <div class="container">
+            <div class="holder">
+                <div class=".holder-title">
+                    <div class="widget-content">
+                        <h1>
+                           Tear.wtf
+                        </h1>
+                    </div>
+                </div>
+
+
+                <div class="widget">
+                    <div class="widget-content">
+                        <h4>Hey Hey Hello Hi!</h4>
+                        <hr class="separator">
+                    <p>
+                        Hey Hey Hello ༼ つ ◕_◕ ༽つ <br>
+                        ಠ_ಠ <br>
+                        This is my own place on the internet <br>
+                        I am tear and i think im cool and got swag and i like my friends <br>
+                        ╰(*°▽°*)╯
+                    </p>
+                    </div>
+                </div>
+
+                 <div class="widget">
+                    <div class="widget-content">
+                        <h4>What i like to do</h4>
+                        <hr class="separator">
+                        <ol>
+                            <li><p>probably nothing</p></li>
+                            <li><p>sleeping Zzz</p></li>
+                            <li><p>i think sleeping is something</p></li>
+                            <li><p>is it?</p></li>
+                        </ol>
+                    </div>
+                </div>
+
+
+                 <div class="widget">
+                    <div class="widget-content">
+                        <h4>Socials</h4>
+                        <hr class="separator">
+                        <button id="tear-discord" onclick="discordbutton('tear')">Discord</button>
+                        <a href="https://www.github.com/prominority", target="_blank"><button>Telegram</button></a>
+                        <a href="https://www.github.com/historism", target="_blank"><button>Github</button></a>
+
+                        <p></p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="profile-holder">
+                <div class="profile-widget">
+                    <div class="image-container">
+                        <img src="assets/icons/pfp.gif" height="125px"/>
+                    </div>
+                    <div class="widget-content">
+                        <h2>@Tear</h2>
+                    </div>
+                </div>
+
+                <div class="profile-widget">
+                    <div class="widget-content">
+                        <h4>Status</h4>
+                        <hr class="separator">
+                        <p id="status-text">if u see this something went wrong... <br><br>(┬┬﹏┬┬)</p>
+                    </div>
+                </div>
+
+                <div class="profile-widget">
+                    <div class="widget-content">
+                    <h4>Last listened</h4>
+                    <hr class="separator">
+                        <div id="last-listened">
+                            <img id="track-art" src=""/>
+                            <div id="track-info">
+                                <p id="track-name">loading...</p>
+                                <p id="track-artist"></p>
+                                <div id="track-bar">
+                            </div>
+                        </div>                    
+                    </div>
+                </div>
+            </div>  
+        </div>
+
+        <!-- Effects -->
+        <script src="/scripts/effects/typewriter_effect.js" async defer></script>
+        <script src="/scripts/effects/star_effect.js" async defer></script>
+        
+        <!-- Handlers -->
+        <script src="/scripts//handlers/discord_handler.js" async defer></script>
+        <script src="/scripts//handlers/lastfm_handler.js" async defer></script>
+        <script src="/scripts//handlers/status_handler.js" async defer></script>
+        
+    </body>
+</html>
