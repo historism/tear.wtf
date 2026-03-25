@@ -2,110 +2,113 @@
 <html>
     <head>
         <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>tear.wtf</title>
+        <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="css/style.css">
-        <link rel="icon" type="image/x-icon" href="/assets/icons/favicon.ico">
     </head>
     <body>
-        <canvas id="stars"></canvas>
+        <div id="loading-screen">
+            <div class="loader"></div>
+        </div>
+
+        <canvas id="Background"></canvas>
 
         <div class="container">
-            <div class="holder">
-                <div class=".holder-title">
-                    <div class="widget-content">
-                        <h1>
-                           Tear.wtf
-                        </h1>
+            <div class="card">
+                <div class="card-inner">
+                    <div class="card-inner-profile">
+                        <img src="/assets/images/pfp.png" height="50px">
+                        <div class="card-inner-profile-text">
+                            <h3>Tear</h3>
+                            <h4 id="tear-discord" onclick="discordbutton('tear')">@8ho</h4>
+                            <h5 id="status-text">If u see this something failed to load ＞﹏＜</h5>
+                        </div>
+                    </div>
+
+
+                    <div class="dropdown-container">
+                        <div class="tab-selector" onclick="toggleDropdown()">
+                            <h4 id="tabname">Select Category</h4>
+                            <span class="arrow" id="arrow"  style="color: #4c4c4c;">▼</span>
+                        </div>
+                        
+                        <ul class="dropdown-menu" id="dropdownMenu">
+                            <li onclick="selectTab('Home')"><h4>Home</h4></li>
+                            <li onclick="selectTab('Roblox')"><h4>Roblox</h4></li>
+                            <li onclick="selectTab('Socials')"><h4>Socials</h4></li>
+                        </ul>
                     </div>
                 </div>
+            </div>
 
-
-                <div class="widget">
-                    <div class="widget-content">
-                        <h4>Hey Hey Hello Hi!</h4>
-                        <hr class="separator">
-                    <p>
-                        Hey Hey Hello ༼ つ ◕_◕ ༽つ <br>
-                        ಠ_ಠ <br>
-                        This is my own place on the internet <br>
-                        I am tear and i think im cool and got swag and i like my friends <br>
-                        ╰(*°▽°*)╯
-                    </p>
+            <div id="content-roblox" class="card tab-content">
+                <div class="content-inner-roblox">
+                    <img src="/assets/images/roblox_pfp.png" height="80px">
+                    
+                    <div class="content-inner-roblox-text">
+                        <h4 class="display-name">@vvv</h4>
+                        <h4 class="username">vvv</h4>
+                        
+                        <div class="roblox-stats">
+                            <div class="stat-box">
+                                <h5>Friends: --</h5>
+                            </div>
+                            <div class="stat-box">
+                                <h5>Followers: --</h5>
+                            </div>
+                            <div class="stat-box">
+                                <h5>Following: --</h5>
+                            </div>
+                        </div>
                     </div>
                 </div>
+            </div>
+            <div id="content-socials" class="card tab-content">
+                <div class="card-inner-socials">
+                    <h4 class="socials-header">Connect with me</h4>
+                    
+                    <div class="socials-grid">
+                        <a href="https://www.t.me/prominority" class="social-item">
+                            <div class="social-info">
+                                <span class="platform">Telegram</span>
+                                <span class="username">@prominority</span>
+                            </div>
+                            <span class="arrow-icon">→</span>
+                        </a>
 
-                 <div class="widget">
-                    <div class="widget-content">
-                        <h4>What i like to do</h4>
-                        <hr class="separator">
-                        <ol>
-                            <li><p>probably nothing</p></li>
-                            <li><p>sleeping Zzz</p></li>
-                            <li><p>i think sleeping is something</p></li>
-                            <li><p>is it?</p></li>
-                        </ol>
-                    </div>
-                </div>
-
-
-                 <div class="widget">
-                    <div class="widget-content">
-                        <h4>Socials</h4>
-                        <hr class="separator">
-                        <button id="tear-discord" onclick="discordbutton('tear')">Discord</button>
-                        <a href="https://www.t.me/prominority", target="_blank"><button>Telegram</button></a>
-                        <a href="https://www.github.com/historism", target="_blank"><button>Github</button></a>
-
-                        <p></p>
+                        <a href="https://www.instagram.com/loooooooooserrrrr/" class="social-item">
+                            <div class="social-info">
+                                <span class="platform">Instagram</span>
+                                <span class="username">@loooooooooserrrrr</span>
+                            </div>
+                            <span class="arrow-icon">→</span>
+                        </a>
                     </div>
                 </div>
             </div>
             
-            <div class="profile-holder">
-                <div class="profile-widget">
-                    <div class="image-container">
-                        <img src="assets/icons/pfp.gif" height="125px"/>
-                    </div>
-                    <div class="widget-content">
-                        <h2>@Tear</h2>
-                    </div>
-                </div>
-
-                <div class="profile-widget">
-                    <div class="widget-content">
-                        <h4>Status</h4>
-                        <hr class="separator">
-                        <p id="status-text">if u see this something went wrong... <br><br>(┬┬﹏┬┬)</p>
+            <div class="spotify-card">
+                <div class="spotify-card-inner">
+                <img id="track-art" src="" height="75px">
+                    <div class="spotify-card-inner-text">    
+                        <h4 id="spotify-header"> now playing <img src="/assets/images/nowplaying.gif" height="14" style="border: none; border-radius: 0; vertical-align:middle; margin-left:-3px; transition: none; box-shadow: none;"> </h4>                   
+                        <h3 id="track-name"></h3>
+                        <h4 id="track-artist"></h4>
                     </div>
                 </div>
-
-                <div class="profile-widget">
-                    <div class="widget-content">
-                    <h4>Last listened</h4>
-                    <hr class="separator">
-                        <div id="last-listened">
-                            <img id="track-art" src=""/>
-                            <div id="track-info">
-                                <p id="track-name">loading...</p>
-                                <p id="track-artist"></p>
-                                <div id="track-bar">
-                            </div>
-                        </div>                    
-                    </div>
-                </div>
-            </div>  
+            </div>
         </div>
 
-        <!-- Effects -->
-        <script src="/scripts/effects/typewriter_effect.js" async defer></script>
-        <script src="/scripts/effects/star_effect.js" async defer></script>
-        
-        <!-- Handlers -->
-        <script src="/scripts//handlers/discord_handler.js" async defer></script>
-        <script src="/scripts//handlers/lastfm_handler.js" async defer></script>
-        <script src="/scripts//handlers/status_handler.js" async defer></script>
-        
-    </body>
+        <!--Effects-->
+        <script src="js/effects/background_effects.js" async defer></script>
 
+        <!--Handlers-->
+        <script src="js/handlers/utils.js" async defer></script>
+        <script src="js/handlers/fetch_roblox.js" async defer></script>
+        <script src="js/handlers/lastfm_handler.js" async defer></script>
+        <script src="js/handlers/tab_handler.js" async defer></script>
+
+    </body>
 </html>
