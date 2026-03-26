@@ -50,5 +50,5 @@ async function getLastListened() {
     }
 }
 
-setInterval(getLastListened, 5000);
 getLastListened();
+setInterval(getLastListened, 5000);
