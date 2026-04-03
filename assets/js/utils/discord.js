@@ -127,6 +127,8 @@ async function getdata() {
         }   
 
         update();
+    } else {
+        document.getElementById("discord-activity").style.display = "none"
     }
 
 

@@ -23,8 +23,11 @@ async function fetchRoblox(userId) {
             document.getElementById("rbx-about").textContent = userData.description;
             document.getElementById("rbx-about").style.display = "block";
         }
-        document.getElementById("rbx-avatar").src = thumbData.data[0].imageUrl;
-        
+        if (thumbData && thumbData.data && thumbData.data.length > 0) {
+            document.getElementById("rbx-avatar").src = thumbData.data[0].imageUrl;
+        } else {
+            console.warn("Avatar data not found in response:", thumbData);
+        }        
         document.getElementById("rbx-friends").textContent = friendsCount.count;
         document.getElementById("rbx-followers").textContent = followersCount.count;
         document.getElementById("rbx-following").textContent = followingCount.count;
@@ -34,5 +37,4 @@ async function fetchRoblox(userId) {
     }
 }
 
-// Call it once
 fetchRoblox("350167333");
