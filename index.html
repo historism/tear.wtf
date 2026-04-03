@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>tear.wtf</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="assets/css/base/main.css">
+    <link rel="stylesheet" href="assets/css/elements/custom.css">
+</head>
+
+<body>
+    <canvas id="Background"></canvas>
+
+    <div class="container">
+
+        <!-- Main widget -->
+        <div class="widget" id="profile-widget">
+            <div class="inner-profile">
+                <img src="/assets/images/profile/pfp.jpg">
+                <div class="profile-info">
+                    <h1>tear</h1>
+                    <h3 id="status-text">Description</h3>
+                </div>
+            </div>
+        </div>
+
+
+
+        <!-- Interactive widget -->
+        <div class="widget" id="interactive-widget">
+            <div class="interactive-nav">
+                <button class="nav-btn active" onclick="switchTab('roblox')">Roblox</button>
+                <button class="nav-btn" onclick="switchTab('discord')">Discord</button>
+                <button class="nav-btn" onclick="switchTab('other-socials')">Other Socials</button>
+            </div>
+
+            <div class="interactive-content">
+                <div id="roblox" class="tab-content active">
+                    <div class="roblox-profile">
+                        <div class="rbx-header">
+                            <img id="rbx-avatar" src="">
+                            <div class="rbx-names">
+                                <h1 id="rbx-displayname">Loading...</h1>
+                                <h2 id="rbx-username">@loading</h2>
+                            </div>
+                        </div>
+
+                        <div class="rbx-stats">
+                            <div class="stat">
+                                <span id="rbx-friends">-</span>
+                                <p>Friends</p>
+                            </div>
+                            <div class="stat">
+                                <span id="rbx-followers">-</span>
+                                <p>Followers</p>
+                            </div>
+                            <div class="stat">
+                                <span id="rbx-following">-</span>
+                                <p>Following</p>
+                            </div>
+                        </div>
+
+                        <div class="rbx-bio">
+                            <p id="rbx-about">Reading bio...</p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div id="discord" class="tab-content">
+                    <div class="discord">
+                        <div class="discord-header">
+                            <div class="avatar-container">
+                                <img id="discord-avatar" src="">
+                                <div id="discord-status-dot"></div>
+                            </div>
+                            <div class="discord-text">
+                                <div class="name-row">
+                                    <h1 id="discord-displayname">Loading...</h1>
+                                    <div id="discord-clan" class="clan-chip" style="display: none;">
+                                        <img id="clan-badge" src="" alt="Badge">
+                                        <span id="clan-tag"></span>
+                                    </div>
+                                </div>
+                                <h2 id="discord-username">@username</h2>
+                                <div class="badges">
+                                    <img src="assets/images/profile/badges/nitro_badge.png" class="user-badge">
+                                </div>
+                            </div>
+
+                    </div>
+                        <div id="discord-activity" class="info-item">
+                            <div class="inner-activity">
+                                <img id="activity-icon" src="">
+                                <div class="activity-text">
+                                    <h1 id="activity-name"></h1>
+                                    <h2 id="activity-details"></h2>
+                                    <h2 id="activity-state"></h2>
+                                    <h3 id="activity-time"></h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="other-socials" class="tab-content">
+                    <div class="socials-container">
+                        <a href="https://instagram.com/youruser" target="_blank" class="social-button">
+                            <span class="social-name">Instagram</span>
+                            <span class="social-arrow">→</span>
+                        </a>
+
+                        <a href="https://twitter.com/youruser" target="_blank" class="social-button">
+                            <span class="social-name">Twitter / X</span>
+                            <span class="social-arrow">→</span>
+                        </a>
+
+                        <a href="https://github.com/youruser" target="_blank" class="social-button">
+                            <span class="social-name">GitHub</span>
+                            <span class="social-arrow">→</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <!-- Spotify widget -->
+        <div class="widget" id="spotify-widget">
+            <div class="inner-spotify">
+                <img id="albumArt">
+                <div class="spotify-info">
+                    <h1 id="song"></h1>
+                    <h2 id="artist"></h2>
+                    <div class="time-container">
+                        <span id="current-time">0:00</span>
+                        <span>|</span>
+                        <span id="total-time">0:00</span>
+                    </div>
+                    <div class="progress-container">
+                        <div id="progress-bar"></div>
+                    </div>
+
+                </div>
+            </div>
+            <div id="lyrics-container">
+                <div id="lyrics-content">
+                    <div id="lyrics-wrapper">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="assets/js/utils/discord.js" async defer></script>
+    <script src="assets/js/utils/roblox.js" async defer></script>
+
+    <script src="assets/js/utils/status.js" async defer></script>
+    <script src="assets/js/utils/switchtab.js" async defer></script>
+    <script src="assets/js/modules/background.js" async defer></script>
+</body>
+
+</html>
