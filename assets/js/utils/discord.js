@@ -97,40 +97,6 @@ async function getdata() {
         clanElement.style.display = "none";
     }
 
-    //Discord activity Data
-    const activity = activities.find(act => act.type == 0);
-    if(activity) {
-        document.getElementById("activity-name").textContent = activity.name;
-        document.getElementById("activity-details").textContent = activity.details || "";
-        document.getElementById("activity-state").textContent = activity.state || "";
-        document.getElementById("activity-icon").src = `https://cdn.discordapp.com/app-assets/${activity.application_id}/${activity.assets.large_image}.png`;;
-
-        let activityInterval;
-        const te = document.getElementById("activity-time");
-
-        function update(){
-            const now = Date.now();
-            const elapsed = now - activity.timestamps.start;
-
-            const totalsec = Math.floor(elapsed/1000);
-            const totalmin = Math.floor(totalsec/60);
-            const totalhours = Math.floor(totalmin/60);
-
-            const displayMins = String(totalmin % 60).padStart(2, '0');
-            const displaySecs = String(totalsec % 60).padStart(2, '0');
-
-            if (totalhours > 0) {
-                te.textContent = `${totalhours}:${displayMins}:${displaySecs}`;
-            } else {
-                te.textContent = `${displayMins}:${displaySecs}`;
-            }
-        }   
-
-        update();
-    } else {
-        document.getElementById("discord-activity").style.display = "none"
-    }
-
 
     // Spotify Data
     const s_album_art_url = spotify?.album_art_url;
