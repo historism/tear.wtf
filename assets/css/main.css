@@ -1,0 +1,45 @@
+@font-face {
+    font-family: fredoka;
+    src: url("/assets/fonts/Fredoka-Regular.ttf") format('truetype');
+}
+
+h1 {
+    font-family: fredoka;
+    font-size: 15px;
+
+    color: #bebdbd;
+    line-height: 0px;
+    margin: 0;
+}
+
+h2 {
+    font-family: fredoka;
+    font-size: 14px;
+
+    color: #868686;
+    line-height: 0px;
+    margin: 0;
+}
+
+h3 {
+    font-family: fredoka;
+    font-size: 13px;
+
+    color: #bebdbd;
+    line-height: 0px;
+    margin: 0px;
+
+}
+
+h4 {
+    font-family: fredoka;
+    font-size: 13px;
+
+    color: #868686;
+    line-height: 0px;
+    margin: 0;
+}
+
+body {
+    background-color: #060606;
+}
